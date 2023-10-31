@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "eduall",
+  "private_key_id": "fbad9bff142bde58af5dfcbf34b57e6bcdf2c3c2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCWpcs9bDvIfmQ5\npkWD9YQvH4oyyeryLSdIk5Cw7L8ykoIGtJbTO3y7nNwfsHeZawbcE+pl8uw6JZNq\niDUTPs4e6fanr1dz/mNEJwA6CVNBSbg3NthyVz+xnAkND8hDycoaqz6MEPMyP/yM\nPgvuHW2zKbvgwFs2qXxPEM0D0vV4LJ6mtORJLwsGE74ekRnRBiSkaj9mqj6+fWV+\nQDIh/LnKmZAzY36bxApuCsGm6R2HTRfctFfZ6GgDNxRJN66I5TVMAge64dSmsB4c\nNHCSuYEk5eEiP3UG9gMhSk1x/95hiKbQFKv+Jkf70FefytArBtT6NXpiZTsw45fc\nb/2egm67AgMBAAECggEAFGdzTif1NvQrhgVnv/ZGh41pjfR8Tn3gJrvZ6qS+Rs7C\nLr9R+F1DyTN3OxGPOWfeH3vRESrkZQHG5DR7n9YvW8+LmW2t1ieb8VSo+rNdo+ek\nvFHA4ke/+EHulebP1KKlrZQJHjaDgghZn/MdcYxp2czqxge3swEktZ7MbdqqZbLM\nK5f6sa0fCO8S0w0y00OWAtwKu0O4/XSEC1kb+8MGVxNKo6uvwcAyA23W/sduo4Nl\n+IdioZAGpGOjVy0GpziLwoPAZ/Pnzr1kfCh0jITG7fRbNM3Tohi33am9oN3y0mdW\nwq4kZe5gfFY+oY9g4KxKi6usiDtnwbe5nSe7gI9jDQKBgQDOwL7r1RLeSvTIX1El\nH1b/8YMZqgu+OSbx745R9qZQni41r6a/fufwlY12loinzGmjf86vOrd8V3uYwUS0\nsaKO0qz/nYfIBAYY2OEFXAOULcuZD8HSI1hTI2q/lT9CcyDewtJHiYrEEfjtOSaL\nolWgTqRVqowEsKY7GOavN/aldQKBgQC6h+Tq7ErgFibiMJdUrOKDpHAivjTpJeBh\nMKveCfC7VhqjWgKzVVSLXxrzSRB1pSRUveBcpNMnu6ThLwYz7qw/zRVw/HNVrvVu\nYlD9gaDJivVGYWWHFuI6LtOQCWFfkrBeE/P88ifEfrGI8sah8iQ6guy/m22jqFP+\nCqkkK4rNbwKBgQCml8p+7l5YvZ8FgUA6IEmSy8CuQkVaDmUiFrvfsVWLqhlj6tf6\nf0BWq7qj7mHIiz4nnwkkSrSkPT169WfuDSAF4x3AjedltFBRXxfZoK3FjSz7dSXg\ns9gsjWIrYw/o9CltNSAIwnwMxsqEI0O6yaAjHprt6BEQimI3RjZCw147LQKBgARU\n95oFFtARc6G5IyqSQUhxXzFPXYc0m/tl1/f2HyMaos+8XWewyZ/a+5M+1SUGSsu1\nBSrhoQ3BK9kW8HvwRQvORXs0QbFxuL1xhxP8GLHVilCyHlt+yo4zXDJyJVLE41er\n+vSa4xWLI7BcgwRrzS+WrszcXTV5yUmTEc6HPFf9AoGALUbrIMwcq4bPqMf1etpZ\nxpDW/El0Eb9lQ/2a85pxr8uxgt9W1AgKEqqAwIpXEmucohRHs88dys10xMiEVxFy\nsmV0YKlhQhLC68OyYtcrqniP3cqdSXG2eJ4cpaqy8cRlaQcZyLwNQF0p6TT2XYcT\nZKHyXYkDB7BO55TUwAMtiSg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kinghomes@eduall.iam.gserviceaccount.com",
+  "client_id": "113586414835326225019",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kinghomes%40eduall.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

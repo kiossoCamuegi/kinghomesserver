@@ -7,18 +7,10 @@ const Files = require("../models/Files");
 const User = require("../models/Users"); 
 var store = require('store')
 
-
-const storage = multer.diskStorage({
-    destination:path.join(__dirname, `./../images/`),
-    filename:(req, file,  cb)=>{
-       return cb(null, `kinghomes_file_${file.fieldname}_${Date.now()}_${Math.random(1,38939839399310001209655555555555556590569659650650965906509656590569002)}_${Math.random(1,38939839399310001209655555555555556590569659650650965906509656590569002)}_${path.extname(file.originalname)}`)
-    }
-});
-
- const uploadStudentPicture = multer({
-    storage:storage
-}).single(`image`);
-
+const stream = require("stream");   
+const { google } = require("googleapis");
+const app = express();
+const upload = multer();
 
 
 
@@ -92,23 +84,62 @@ router.post("/posthome", async(req, res)=>{
 });
 
  
+const KEYFILEPATH = path.join(__dirname, "uploaddrive.json");
+const SCOPES = ["https://www.googleapis.com/auth/drive"];
 
-router.post("/upload" ,  uploadStudentPicture,  async(req, res)=>{   
-   const Data = new Files({ 
-      name:req.file.filename,
-      code:req.body.code, 
-  });
+const auth = new google.auth.GoogleAuth({
+    keyFile: KEYFILEPATH,
+    scopes: SCOPES,
+});
 
-    let id = store.get('userid'); 
-    if(id !== undefined){
 
+ 
+router.post("/upload" ,  upload.any(),  async(req, res)=>{   
+ 
+   let id = store.get('userid'); 
+   if(id !== undefined){
+
+
+ 
+
+   const uploadFile = async(fileObject) => {
+      const bufferStream = new stream.PassThrough();
+      bufferStream.end(fileObject.buffer);
       try {
-         const newData = await Data.save();
-         res.status(201).json(newData);
-      } catch (error){
-       console.log(error)
+         const { data } = await google.drive({ version: "v3", auth }).files.create({
+            media: {
+                mimeType: fileObject.mimeType,
+                body: bufferStream,
+            },
+            requestBody: {
+                name: fileObject.originalname,
+                parents: ["1UBIcXC13aSlxZZ6Me_5JSVtpS5hGzYdz"],
+            },
+            fields: "id,name",
+         }); 
+
+
+        console.log(data.id)
+        let  Data = new Files({name:data.id, code:req.body.code})
+        const newData = await Data.save();
+        res.status(201).json(newData); 
+
+      } catch (error) {
          res.status(500).json({message:error.message});
-      } 
+      }
+   };
+   
+  const {files } = req;
+  for (let f = 0; f < files.length; f += 1) {
+     try {
+         await uploadFile(files[f]); 
+     } catch (error) { 
+      res.status(500).json({message:error.message});
+     }
+   }
+
+
+ 
     }else{
       res.status(500).json({message:"Something went wrong !"});
     }
