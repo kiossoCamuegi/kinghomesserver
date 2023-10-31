@@ -8,7 +8,7 @@ const GOOGLE_CLIENT_SECRET ="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";
 passport.use(new GoogleSrategy({
     clientID:GOOGLE_CLIENT_ID,
     clientSecret:GOOGLE_CLIENT_SECRET,
-    callbackURL: "/auth/google/callback",
+    callbackURL: "https://kinghomesserver.vercel.app/auth/google/callback",
     passReqToCallback: true
   },
   function(request, accessToken, refreshToken, profile, done) { 
